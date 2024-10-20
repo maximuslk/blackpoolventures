@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Noto+Sans+Tamil:wght@100..900&display=swap" rel="stylesheet">
+
+    <style>
+        .team-container {
+            position: relative;
+            width: 1280px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .team-container .cards {
+            position: relative;
+            width: 300px;
+            height: 400px;
+            background: linear-gradient(#2196f3, #2196f3 30%, #1d3548 30%, #1d3548);
+            /* margin: 10px; */
+            border-radius: 16px;
+            overflow: hidden;
+        }
+        .team-container .cards .imgBx {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transition: 0.5s;
+            z-index: 100000;
+            transform-origin: top;
+        }
+        .team-container .cards:hover .imgBx {
+            transform: translateY(30px) scale(0.5);
+        }
+        .team-container .cards .imgBx img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 110%;
+            height: 110%;
+            top: -10px;
+            object-fit: cover;
+            border-radius: 24px;
+        }
+        .team-container .cards .content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            text-align: center;
+            padding-bottom: 30px;
+            transform: translateY(100%);
+            transition: 0.5s;
+        }
+        .team-container .cards:hover .content {
+            transform: translateY(0);
+        }
+.team-container .cards .content .details h2 {
+  color: #fff;
+  font-size: 1.5em;
+  font-weight: 500;
+}
+.team-container .cards .content .details h2 span {
+  font-size: 0.8em;
+  font-weight: 400;
+  color: #e5eaec;
+}
+.social_icons {
+  position: relative;
+  display: flex;
+  margin-top: 5px;
+}
+.social_icons li {
+  list-style: none;
+  margin: 4px;
+}
+.social_icons li a {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 1.5em;
+  color: #fff;
+  text-decoration: none;
+  transition: 0.5s;
+}
+.social_icons li a:hover {
+  transform: rotate(360deg);
+  background: #03a9f4;
+}        
+
+.netflix-card-container{
+    display: grid; 
+    grid-template-columns: repeat(12, 1fr); 
+    gap: 16px; 
+    text-align: center; 
+    margin: auto; 
+    max-width: 100vw !important;
+}
+.netflix-card{
+    width: 240px;
+    height: 240px;
+    background-size: cover; 
+    border-radius: 8px;    
+    /* transition: all 500ms cubic-bezier(0.420, 0.000, 0.580, 1.000) */
+    transition: all 500ms cubic-bezier(0.420, 0.000, 0.580, 1.000);
+
+}
+.netflix-card:hover{
+    width: 480px;
+    box-shadow: 0 8px 16px 0 rgba(3, 120, 230, 0.322);
+    
+}
+
+    </style>
+</head>
+<body>
+    <!-- <table class="table" style="table-layout: fixed;">
+        <body class="">
+            <tr class="">
+                <td style="max-width: 50%;">
+                    <div class="card" style="background-image: url(/images/blackpool_complex.jpg); background-size:cover;">
+                        <div class="container">
+                          <span class="cardheader">Blackpool Complex</span>
+                          <p class="cardtext">Airbnb propery overlooking the Trincomalee Beach. <a href="http://www.airbnb.com/property/blackpool">More details</a></p>
+                        </div>
+                      </div>
+                </td>
+                <td style="max-width: 50%;">
+                    <div class="card" style="background-image: url(/images/blackpool_farm.jpg); background-size:cover;">
+                        <div class="container">
+                          <span class="cardheader">Blackpool Farmhouse</span>
+                          <p class="cardtext"> <a href="/blackpool-farming.html">An organic based farm dedicated to providing high-quality, sustainably grown organic produce to local...</a></p>
+                        </div>
+                      </div>
+    
+                </td>                        
+            <tr>
+            <tr class="">
+                <td style="max-width: 50%;">
+                    <div class="card" style="background-image: url(/images/blackpool_manpower.jpg); background-size:cover;">
+                        <div class="container">
+                            <span class="cardheader">Blackpool Overseas Manpower Management </span>
+                            <p class="cardtext"><a>specializes in connecting businesses with skilled professionals across various industries. Our mission ...</a></p>
+                        </div>
+                    </div>
+    
+                </td>
+                <td style="max-width: 50%;">
+                    <div class="card" style="background-image: url(/images/blackpool_manufacturing.jpg); background-size:cover;">
+                        <div class="container">
+                            <span class="cardheader">Blackpool Electronic Manufacturing</span>
+                            <p class="cardtext"><a href="/blackpool-farming.html">An organic based farm dedicated to providing high-quality, sustainably grown organic produce to local...</a></p>
+                        </div>
+                    </div>
+                </td>                        
+            <tr>          
+        </body>
+    </table> -->
+    <!-- <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; width: 65%; text-align: center; margin: auto; border-width:2px; border-style:solid; border-color:black;">
+        <div style="margin: auto !important; ">
+            <div style="background-color: whitesmoke; height: 180px; width: 460px; border-radius: 24px; box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); display: grid; grid-template-columns: repeat(2, 1fr);">
+                <div style="height: 180px; width: 180px; border-radius: 100%; box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); background-image: url(/images/Team/Roshan\ Rajappa.webp); background-size: cover; margin-left: 8px;"></div>
+                <div style="text-align: left; margin-left: 16px; align-self: center;">
+                    <span style="font-size: 1.7rem;">Roshan Rajappa</span>
+                    Chief Executive Officer <br>
+                    <span>Read his story<i class="fas fa-long-arrow-right" style="color: darkblue;" ></i></span>
+                </div>
+            </div>            
+        </div>
+        <div style="border-width:2px; border-style:solid; border-color:black;">        
+            <div style="background-color: blanchedalmond;">hello 2</div>
+        </div>
+    </div> -->
+
+    <!-- <div class="team-container">
+        <div class="cards" style="background-image: url(/images/Team/Roshan\ Rajappa.webp); background-size: cover;">
+            <div style="background-color: rgba(0, 0, 0, 0.6); content: 'hello'; width: 100%; height: 100%;"></div>
+            
+            <div class="imgBx">
+            <img src="/images/Team/Roshan Rajappa.webp" alt="">
+            </div>
+            <div class="content">
+            <div class="details">
+                <h2 style="font-family: Roboto;">Roshan Rajappa</h2>
+                <h2 style="font-family: Noto Sans Tamil;">Roshan Rajappa<br><span style="font-family: Merriweather;">Chief Executive Officer</span></h2>
+                <ul class="social_icons">
+                <li><a href=""><i class="fa-brands fa-linkedin"></i></a></li>
+                <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>    
+                </ul>
+            </div>
+            </div>
+        </div>    
+    </div> -->
+    <div class="netflix-card-container">
+    <div class="netflix-card" style="background-image: url(images/Team/Roshan\ Rajappa.webp);"></div>
+    <div class="netflix-card" style="background-image: url(images/Team/Roshan\ Rajappa.webp);"></div>
+    <div class="netflix-card" style="background-image: url(images/Team/Roshan\ Rajappa.webp);"></div>
+    <div class="netflix-card" style="background-image: url(images/Team/Roshan\ Rajappa.webp);"></div>
+    <div class="netflix-card" style="background-image: url(images/Team/Roshan\ Rajappa.webp);"></div>
+    <div class="netflix-card" style="background-image: url(images/Team/Roshan\ Rajappa.webp);"></div>
+</div>
+</body>
+</html>
